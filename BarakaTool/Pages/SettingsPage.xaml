@@ -1,0 +1,165 @@
+<Page x:Class="BarakaTool.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="{StaticResource DarkBackground}"
+      Title="Settings">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="20" Spacing="20">
+
+            <!-- Account Settings -->
+            <Border Background="{StaticResource SurfaceColor}" Padding="20" CornerRadius="10" BorderBrush="{StaticResource PrimaryGreen}" BorderThickness="2">
+                <StackPanel Spacing="15">
+                    <TextBlock Text="🔐 Account Settings" FontSize="16" FontWeight="Bold" Foreground="{StaticResource PrimaryGreen}"/>
+
+                    <!-- Current Password -->
+                    <StackPanel>
+                        <TextBlock Text="Current Password" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <PasswordBox Name="CurrentPasswordBox"
+                                     Background="#0A0A0A"
+                                     Foreground="White"
+                                     BorderBrush="{StaticResource PrimaryGreen}"
+                                     BorderThickness="2"
+                                     Padding="12,10"
+                                     FontSize="14"
+                                     CornerRadius="5"/>
+                    </StackPanel>
+
+                    <!-- New Password -->
+                    <StackPanel>
+                        <TextBlock Text="New Password" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <PasswordBox Name="NewPasswordBox"
+                                     Background="#0A0A0A"
+                                     Foreground="White"
+                                     BorderBrush="{StaticResource PrimaryGreen}"
+                                     BorderThickness="2"
+                                     Padding="12,10"
+                                     FontSize="14"
+                                     CornerRadius="5"/>
+                    </StackPanel>
+
+                    <!-- Confirm New Password -->
+                    <StackPanel>
+                        <TextBlock Text="Confirm New Password" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <PasswordBox Name="ConfirmPasswordBox"
+                                     Background="#0A0A0A"
+                                     Foreground="White"
+                                     BorderBrush="{StaticResource PrimaryGreen}"
+                                     BorderThickness="2"
+                                     Padding="12,10"
+                                     FontSize="14"
+                                     CornerRadius="5"/>
+                    </StackPanel>
+
+                    <!-- Status Message -->
+                    <TextBlock Name="PasswordStatusMessage" 
+                               Foreground="#00C853" 
+                               FontSize="12"
+                               TextWrapping="Wrap"
+                               Visibility="Collapsed"/>
+
+                    <!-- Change Password Button -->
+                    <Button Name="ChangePasswordButton"
+                            Style="{StaticResource MaterialDesignRaisedButton}"
+                            Background="{StaticResource PrimaryGreen}"
+                            Foreground="White"
+                            Content="✓ Update Password"
+                            Height="40"
+                            FontSize="12"
+                            FontWeight="Bold"
+                            Click="ChangePasswordButton_Click"
+                            Cursor="Hand"/>
+                </StackPanel>
+            </Border>
+
+            <!-- Application Settings -->
+            <Border Background="{StaticResource SurfaceColor}" Padding="20" CornerRadius="10">
+                <StackPanel Spacing="15">
+                    <TextBlock Text="⚙️ Application Settings" FontSize="16" FontWeight="Bold" Foreground="{StaticResource PrimaryGreen}"/>
+
+                    <!-- Database Path -->
+                    <StackPanel>
+                        <TextBlock Text="Database Location" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <StackPanel Orientation="Horizontal" Spacing="10">
+                            <TextBox Background="#0A0A0A" Foreground="White" BorderBrush="{StaticResource PrimaryGreen}" 
+                                     BorderThickness="2" Padding="12,10" FontSize="12" CornerRadius="5" 
+                                     Width="250" Text="barakatool.db" IsReadOnly="True"/>
+                            <Button Style="{StaticResource MaterialDesignRaisedButton}" Background="{StaticResource PrimaryBlue}" 
+                                    Foreground="White" Content="Browse" Height="40" Padding="15,10"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Backup Path -->
+                    <StackPanel>
+                        <TextBlock Text="Backup Location" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <StackPanel Orientation="Horizontal" Spacing="10">
+                            <TextBox Background="#0A0A0A" Foreground="White" BorderBrush="{StaticResource PrimaryGreen}" 
+                                     BorderThickness="2" Padding="12,10" FontSize="12" CornerRadius="5" 
+                                     Width="250" Text="C:\BARAKA_BACKUPS" IsReadOnly="True"/>
+                            <Button Style="{StaticResource MaterialDesignRaisedButton}" Background="{StaticResource PrimaryBlue}" 
+                                    Foreground="White" Content="Browse" Height="40" Padding="15,10"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Theme Selection -->
+                    <StackPanel>
+                        <TextBlock Text="Theme" FontSize="12" Foreground="#888888" Margin="0,0,0,5"/>
+                        <ComboBox Background="#0A0A0A" Foreground="White" BorderBrush="{StaticResource PrimaryGreen}" 
+                                  BorderThickness="2" Padding="12,10" FontSize="12" Height="40">
+                            <ComboBoxItem Content="Dark (Default)" IsSelected="True"/>
+                            <ComboBoxItem Content="Light"/>
+                            <ComboBoxItem Content="Custom"/>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- Support & Contact -->
+            <Border Background="{StaticResource SurfaceColor}" Padding="20" CornerRadius="10" BorderBrush="#FF9800" BorderThickness="2">
+                <StackPanel Spacing="15">
+                    <TextBlock Text="📞 Support & Contact" FontSize="16" FontWeight="Bold" Foreground="#FF9800"/>
+                    
+                    <Border Background="#1A1A1A" Padding="15" CornerRadius="5">
+                        <StackPanel Spacing="10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="WhatsApp:" Foreground="#888888" Width="100"/>
+                                <TextBlock Text="0782700859" Foreground="{StaticResource PrimaryBlue}" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Company:" Foreground="#888888" Width="100"/>
+                                <TextBlock Text="BARAKA TANZANIA" Foreground="#00C853" FontWeight="Bold"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Version:" Foreground="#888888" Width="100"/>
+                                <TextBlock Text="1.0.0" Foreground="White" FontWeight="Bold"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Button Style="{StaticResource MaterialDesignRaisedButton}" 
+                            Background="#FF9800" 
+                            Foreground="White" 
+                            Content="📲 Contact Support on WhatsApp"
+                            Height="40"
+                            FontSize="12"
+                            FontWeight="Bold"
+                            Cursor="Hand"
+                            Click="ContactSupportButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- About Section -->
+            <Border Background="{StaticResource SurfaceColor}" Padding="20" CornerRadius="10" BorderBrush="#9C27B0" BorderThickness="2">
+                <StackPanel Spacing="10">
+                    <TextBlock Text="ℹ️ About BARAKA TOOL" FontSize="16" FontWeight="Bold" Foreground="#9C27B0"/>
+                    <TextBlock Text="Professional Device Management Solution" Foreground="#888888" FontSize="12"/>
+                    <TextBlock Text="BARAKA TOOL is a powerful Windows desktop application designed for managing mobile devices from various manufacturers." 
+                               Foreground="White" FontSize="12" TextWrapping="Wrap"/>
+                    <TextBlock Text="Supported: Samsung, Xiaomi, Tecno, Infinix, Oppo, Vivo" 
+                               Foreground="{StaticResource PrimaryGreen}" FontSize="11" Margin="0,10,0,0"/>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

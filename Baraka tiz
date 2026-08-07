@@ -1,0 +1,125 @@
+# BARAKA TOOL V1.0 - Complete Device Management System
+
+**Professional Windows Desktop Application for Mobile Device Management**
+
+---
+
+## 🎯 Overview
+
+BARAKA TOOL is a comprehensive device management solution designed for managing mobile devices from various manufacturers. It provides powerful tools for device maintenance, FRP removal, factory resets, backups, and more.
+
+**Developer:** Baraka Tanzania  
+**Version:** 1.0.0  
+**Platform:** Windows 10/11 (.NET 8)  
+**Support:** WhatsApp: 0782700859  
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication
+- Secure login system
+- Username: `0782700859`
+- Password: `782700859b`
+- Change password anytime from Settings
+
+### 📱 Device Support
+- ✅ Samsung
+- ✅ Xiaomi
+- ✅ Tecno
+- ✅ Infinix
+- ✅ Oppo
+- ✅ Vivo
+
+### 🔧 Device Tools
+
+#### 1. **Remove FRP Lock** 🔓
+- Factory Reset Protection removal
+- All supported brands
+- Safe and secure process
+- Device-specific instructions
+
+#### 2. **Hard Reset** 🔄
+- Complete device data wipe
+- All user data removed permanently
+- Reset to factory settings
+- Irreversible operation (double confirmation)
+
+#### 3. **Factory Reset** 🔁
+- Reset device to original state
+- Brand-specific instructions
+- Safe and guided process
+- All data cleared
+
+#### 4. **Device Management** 📱
+- View device information
+- Screenshot capability
+- File manager access
+- Backup and restore
+
+### 📊 Dashboard
+- Device statistics
+- Quick access to tools
+- System information
+- Event logging
+
+### ⚙️ Settings
+- Change password
+- Database configuration
+- Backup location settings
+- Theme settings
+
+### 📞 Support Center
+- 24/7 WhatsApp support
+- FAQ section
+- Help & resources
+- Company information
+
+---
+
+## 🏗️ Project Structure
+
+```
+BarakaTool/
+├── App.xaml
+├── App.xaml.cs
+├── LoginWindow.xaml
+├── LoginWindow.xaml.cs
+├── MainWindow.xaml
+├── MainWindow.xaml.cs
+├── BarakaTool.csproj
+├── Data/
+│   └── DatabaseManager.cs
+└── Pages/
+    ├── DashboardPage.xaml
+    ├── DashboardPage.xaml.cs
+    ├── SamsungPage.xaml
+    ├── SamsungPage.xaml.cs
+    ├── XiaomiPage.xaml
+    ├── XiaomiPage.xaml.cs
+    ├── TecnoPage.xaml
+    ├── TecnoPage.xaml.cs
+    ├── InfinixPage.xaml
+    ├── InfinixPage.xaml.cs
+    ├── OppoPage.xaml
+    ├── OppoPage.xaml.cs
+    ├── VivoPage.xaml
+    ├── VivoPage.xaml.cs
+    ├── SettingsPage.xaml
+    ├── SettingsPage.xaml.cs
+    ├── RemoveFRPPage.xaml
+    ├── RemoveFRPPage.xaml.cs
+    ├── HardResetPage.xaml
+    ├── HardResetPage.xaml.cs
+    ├── FactoryResetPage.xaml
+    ├── FactoryResetPage.xaml.cs
+    ├── SupportPage.xaml
+    ├── SupportPage.xaml.cs
+    ├── AboutPage.xaml
+    └── AboutPage.xaml.cs
+```
+
+---
+
+## 🚀 Getting Started
+
