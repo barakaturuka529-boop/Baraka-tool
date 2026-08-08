@@ -23,7 +23,7 @@ BARAKA TOOL is a comprehensive device management solution designed for managing 
 - Password: `782700859b`
 - Change password anytime from Settings
 
-### 📱 Device Support
+### 📱 Device Support 
 - ✅ Samsung
 - ✅ Xiaomi
 - ✅ Tecno
